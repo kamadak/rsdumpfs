@@ -1,0 +1,27 @@
+Backup Tool Like pdumpfs Based-on rsync
+---------------------------------------
+
+   This is a daily backup tool inspired by pdumpfs [PDUMPFS] but built on
+   top of rsync's --link-dest option.
+
+Usage
+-----
+
+   % rsdumpfs SRC DEST
+
+Differences from pdumpfs
+------------------------
+
+   -  Directory hierarchy is yyyy/mmdd instead of yyyy/mm/dd.
+      (Closer to Plan 9's fs.)
+   -  Hard links are preserved.
+   -  Traversal order is different.
+   -  Directory names are printed with trailing slashes.
+   -  Device and special files are printed differently.
+      (Both tools ignore them.)
+
+References
+----------
+
+   [PDUMPFS] Satoru Takabayashi, "pdumpfs: a daily backup system similar
+      to Plan9's dumpfs", <http://0xcc.net/pdumpfs/>.
